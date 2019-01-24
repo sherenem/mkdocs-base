@@ -42,6 +42,7 @@ extra:
    
 plugins:
    - search
+   - pdf-export
 
 extra_css: [extra.css]
 
