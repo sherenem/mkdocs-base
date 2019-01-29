@@ -50,8 +50,8 @@ Let's begin.
         subscription.
 4.  Note that the tool starts to update your product.
 
-    ![](images/icons/grey_arrow_down.png){.expand-control-image}If the
-    tool lists any conflicts, click to see how to resolve them...
+    ??? note "If the
+    tool lists any conflicts, see how to resolve them..."
 
     A conflict is likely to happen when a configuration file or artifact
     that you have customized has changed in the updates. If the
@@ -67,10 +67,10 @@ Let's begin.
         3.  The file that is in the new update level, after updating
             (e.g., `test.jag.updated`).
         4.  The difference of the two files
-            in **ii** and **iii **(e.g., `test.jag.diff`).
+            in **ii** and **iii**(e.g., `test.jag.diff`).
     2.  By looking at the three files (`.old`, `.updated`, and `.diff`),
         resolve the conflicts and save the resolved file with
-        the **`.final` **extension (e.g., `test.jag.final`). 
+        the **`.final`**extension (e.g., `test.jag.final`). 
     3.  Run the tool again with the '--continue' flag for the tool to
         merge the changes in `.final` file with the file which created
         the conflict.
@@ -95,7 +95,8 @@ Let's begin.
     ./update_darwin --revert (On OS X)
     ```
 
-    **Tip**: To see a list of commands the tool provides, run the tool
-    with the **--help** option.
+    !!! note **"Tip"**: 
+    To see a list of commands the tool provides, run the tool with 
+    the **--help** option.
 
 You have now updated your product using the WSO2 in-place update tool.
