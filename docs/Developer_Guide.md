@@ -13,15 +13,14 @@ update directly or convert a patch to an update.
 Before you begin, here are the descriptions of the files used in this
 guide. The wum-uc tool generates both these files.
 
-![](images/icons/grey_arrow_down.png){.expand-control-image}update-descriptor3.yaml
-file
-
-This is a newly introduced file that contains details about the update
-that complies with WUM 3.0.0 . Every update has an
-`         update-descriptor3.yaml       ` file. It has details about the
-products that this update is fully or partially compatible with, the
-file changes (added, removed, or modified), descriptions, and
-instructions.
+>
+!!! Note "Note"
+    This is a newly introduced file that contains details about the update
+    that complies with WUM 3.0.0 . Every update has an
+    `         update-descriptor3.yaml       ` file. It has details about the
+    products that this update is fully or partially compatible with, the
+    file changes (added, removed, or modified), descriptions, and
+    instructions.
 
 A sample file looks like the following:
 
@@ -113,10 +112,10 @@ description: |
 ```
 
 If there are no bug fixes, enter N/A in the `         JIRA_ID       `
-and `         Summary       ` fields. I f there are no instructions,
+and `         Summary       ` fields. If there are no instructions,
 leave a blank line as follows:
 
-![](attachments/103318258/103318263.png){width="150"}
+![](attachments/103318258/103318263.png)
 
 Note that you do not manually modify the `added_files` and
 `             modified_files           ` sections like in the previous
@@ -126,10 +125,9 @@ In cases where the version of a JAR file is updated, remove the old JAR
 file and provide path to the removed file when prompted by the wum-uc
 tool .
 
-![](images/icons/grey_arrow_down.png){.expand-control-image}update-descriptor.yaml
-file
+![](images/icons/grey_arrow_down.png)
 
-**This file will be discontinued when WUM 2.0.0 gets deprecated.**
+**This file will be discontinued when WUM 2.0.0 gets depreciated.**
 
 The update-descriptor.yaml file is used to identify update details by
 WUM 2.0.0. It will get created by the wum-uc tool along with the
@@ -290,8 +288,7 @@ Follow below steps to create an update.
 9.  Note that the update ZIP is created in the location from where you
     execute wum-uc. The tool displays a summary of the update creation.
 
-    ![](images/icons/grey_arrow_down.png){.expand-control-image}Click to
-    see an example...
+    ![](images/icons/grey_arrow_down.png)
 
     Here's an example:
 
@@ -324,22 +321,22 @@ location is
 
 1.  When changing the lifecycle state of the created update from
     Development to Staging, you see a newly added check as follows.
-    Click it.![](attachments/103318258/103318264.png){width="200"}
+    Click it.![](attachments/103318258/103318264.png)
 2.  You get directed to a seperate page as follows: 
 3.  Click **GET UPDATE YAML** to see the YAML information as follows:  
-    ![](attachments/103318258/103318261.png){width="500"}
+    ![](attachments/103318258/103318261.png)
 4.  Verify the YAML information and click **GET PRODUCT LIST** to see
     the product details as follows:  
-    ![](attachments/103318258/103318260.png){width="550"}
+    ![](attachments/103318258/103318260.png)
 5.  Verify the product details and click CONTINUE.
 6.  You get a page as follows. Update it with the products relevant for
     your update number.  
-    ![](attachments/103318258/103318259.png){width="600"}
+    ![](attachments/103318258/103318259.png)
 
 Some samples for the `     UPDATE_LOCATION   ` directory are shown
 below:
-
-![](images/icons/grey_arrow_down.png){.expand-control-image}Sample 1
+>
+!!! Note : "Sample 1"
 
 ``` java
 ├── axis2_1.6.1.wso2v16.jar
@@ -351,7 +348,7 @@ below:
 └── update-descriptor.yaml
 ```
 
-![](images/icons/grey_arrow_down.png){.expand-control-image}Sample 2
+!!! Note : "Sample 2"
 
 ``` java
 ├── LICENSE.txt
@@ -361,7 +358,7 @@ below:
 └── update-descriptor.yaml
 ```
 
-![](images/icons/grey_arrow_down.png){.expand-control-image}Sample 3
+!!! Note : "Sample 3"
 
 ``` java
 ├── LICENSE.txt
@@ -383,7 +380,7 @@ below:
 └── update-descriptor.yaml
 ```
 
-![](images/icons/grey_arrow_down.png){.expand-control-image}Sample 4
+!!! Note : "Sample 4"
 
 ``` java
 ├── bin
@@ -536,9 +533,8 @@ file to new WUM update format when the patch has configuration changes.
     same content above should be added to the instructions field of the
     new `update-descriptor3.yaml` file after successfully creating the
     update.
-
-    ![](images/icons/grey_arrow_down.png){.expand-control-image}Expand
-    to see a sample instructions.txt file...
+>
+    !!!Note : "Expand to see a sample instructions.txt file..."
 
     ``` java
     When the org.wso2.carbon.identity.mgt.IdentityMgtEventListener is enabled via <EventListeners> configuration in repository/conf/identity/identity.xml, it engages CacheClearingUserOperationListener which clears the policy cache.
@@ -571,21 +567,4 @@ file to new WUM update format when the patch has configuration changes.
     created in the current working directory. You can validated it using
     the  `         wum-uc validate        ` command.
 
-## Attachments:
 
-![](images/icons/bullet_blue.gif){width="8" height="8"}
-[overview-products.png](attachments/103318258/103318259.png)
-(image/png)  
-![](images/icons/bullet_blue.gif){width="8" height="8"}
-[Product-details.png](attachments/103318258/103318260.png) (image/png)  
-![](images/icons/bullet_blue.gif){width="8" height="8"}
-[get-updated-YAML.png](attachments/103318258/103318261.png)
-(image/png)  
-![](images/icons/bullet_blue.gif){width="8" height="8"}
-[YAML-description.png](attachments/103318258/103318262.png)
-(image/png)  
-![](images/icons/bullet_blue.gif){width="8" height="8"}
-[blank-line.png](attachments/103318258/103318263.png) (image/png)  
-![](images/icons/bullet_blue.gif){width="8" height="8"}
-[image2018-8-10\_17-37-18.png](attachments/103318258/103318264.png)
-(image/png)  

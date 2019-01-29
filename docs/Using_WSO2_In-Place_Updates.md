@@ -1,13 +1,12 @@
 
 # Using WSO2 In-Place Updates
-
 The **WSO2 in-place updates** tool allows you to update your currently
 used product by fetching updates from the server and merging all
 configurations and files. The tool also gives backup and restore
 capability.
 
 Given below is how to get in-place updates to your product.
->
+
 !!! note "Before you begin"
         -   Make sure you are already using a [WSO2
             product](https://wso2.com/platform). (Let's call this
