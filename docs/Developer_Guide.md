@@ -125,8 +125,6 @@ In cases where the version of a JAR file is updated, remove the old JAR
 file and provide path to the removed file when prompted by the wum-uc
 tool .
 
-![](images/icons/grey_arrow_down.png)
-
 **This file will be discontinued when WUM 2.0.0 gets depreciated.**
 
 The update-descriptor.yaml file is used to identify update details by
