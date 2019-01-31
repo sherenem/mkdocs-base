@@ -49,8 +49,7 @@ Let's begin.
         subscription.
 4.  Note that the tool starts to update your product.
 
-    ??? note "If the
-    tool lists any conflicts, see how to resolve them..."
+!!! note "If the tool lists any conflicts, see how to resolve them..."
 
     A conflict is likely to happen when a configuration file or artifact
     that you have customized has changed in the updates. If the
@@ -58,18 +57,18 @@ Let's begin.
     In case you have customized .war or .car files, you need to apply
     the customizations on top of the updated .war and .car files.
 
-    1.  Go to the locations of the files that have conflicts and note
-        the following files that are created by the tool:  
-        1.  The file that has your customizations (e.g., `test.jag`).
-        2.  The file that was there in the previous update level, before
-            updating (e.g., `test.jag.old`).
-        3.  The file that is in the new update level, after updating
-            (e.g., `test.jag.updated`).
-        4.  The difference of the two files
+	1.  Go to the locations of the files that have conflicts and note
+    the following files that are created by the tool:  
+    	1.  The file that has your customizations (e.g., `test.jag`).
+    	2.  The file that was there in the previous update level, before
+        updating (e.g., `test.jag.old`).
+    	3.  The file that is in the new update level, after updating
+        (e.g., `test.jag.updated`).
+    	4.  The difference of the two files
             in **ii** and **iii**(e.g., `test.jag.diff`).
     2.  By looking at the three files (`.old`, `.updated`, and `.diff`),
         resolve the conflicts and save the resolved file with
-        the **`.final`**extension (e.g., `test.jag.final`). 
+        the `.final` extension (e.g., `test.jag.final`). 
     3.  Run the tool again with the '--continue' flag for the tool to
         merge the changes in `.final` file with the file which created
         the conflict.
@@ -84,17 +83,17 @@ Let's begin.
         your custom configurations and deleted all the other temporary
         files (i.e., `.old`, `.updated`, `.diff`, and `.final`)
 
+
 5.  Restart the server.
 
 6.  If you want to revert the updates and restore the previous state,
     run the following command:
-
     ``` java
     ./update_linux --revert (On Linux)
     ./update_darwin --revert (On OS X)
-    ```
+    ```    
 
-    !!! note **"Tip"**: 
+!!! note "Tip" 
     To see a list of commands the tool provides, run the tool with 
     the **--help** option.
 

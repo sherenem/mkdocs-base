@@ -13,8 +13,7 @@ update directly or convert a patch to an update.
 Before you begin, here are the descriptions of the files used in this
 guide. The wum-uc tool generates both these files.
 
->
-!!! Note "Note"
+!!! note "Note"
     This is a newly introduced file that contains details about the update
     that complies with WUM 3.0.0 . Every update has an
     `         update-descriptor3.yaml       ` file. It has details about the
@@ -76,13 +75,13 @@ In WUM 2.0.0, we used update-descriptor.yaml . The reason to introduce a
 new file in WUM 3.0.0 is because WUM 3.0.0 s upports partial updates.
 For example, in the above sample, the update numbered 2922 gets fully
 applied to `         wso2am-2.1.0.standard       ` product while it gets
-partially applied to `         wso2am-         2.0.0.standard       ` ,
-wso2esb-5.0.0.standard, and `         wso2is-km-5.3.0.standard       `
+partially applied to `         wso2am-2.0.0.standard       ` ,
+`		wso2esb-5.0.0.standard		`, and `         wso2is-km-5.3.0.standard       `
 products.
 
 You should manually fill in the description, instructions, and the
 bug\_fixes fields of the `         update-descriptor3.yaml       ` file
-according to the products listed in it. W hen filling the description
+according to the products listed in it. When filling the description
 and instructions sections of an update that gets fully or partially
 applied to multiple products, use paragraphs to separate the description
 per product. Be careful not to break the initial indentation though as
@@ -286,8 +285,6 @@ Follow below steps to create an update.
 9.  Note that the update ZIP is created in the location from where you
     execute wum-uc. The tool displays a summary of the update creation.
 
-    ![](images/icons/grey_arrow_down.png)
-
     Here's an example:
 
     ``` java
@@ -333,8 +330,7 @@ location is
 
 Some samples for the `     UPDATE_LOCATION   ` directory are shown
 below:
->
-!!! Note : "Sample 1"
+Sample 1
 
 ``` java
 ├── axis2_1.6.1.wso2v16.jar
@@ -346,7 +342,7 @@ below:
 └── update-descriptor.yaml
 ```
 
-!!! Note : "Sample 2"
+Sample 2
 
 ``` java
 ├── LICENSE.txt
@@ -356,7 +352,7 @@ below:
 └── update-descriptor.yaml
 ```
 
-!!! Note : "Sample 3"
+Sample 3
 
 ``` java
 ├── LICENSE.txt
@@ -378,7 +374,7 @@ below:
 └── update-descriptor.yaml
 ```
 
-!!! Note : "Sample 4"
+Sample 4
 
 ``` java
 ├── bin
@@ -502,13 +498,13 @@ WUM update format. 
 
 6.  Follow the update creation process mentioned above to create the
     update.
-7.  Note that, if successful, the  WSO2-CARBON-UPDATE-4.4.0–0237.zip
+7.  Note that, if successful, the  `		WSO2-CARBON-UPDATE-4.4.0–0237.zip		`
      file will be created in the current working directory. You can
     validate it using the  wum-uc validate command.
 
 #### Sample 3: When the patch has config changes
 
-Follow the steps below to convert the WSO2-CARBON-PATCH-4.4.0–0478.zip
+Follow the steps below to convert the `		WSO2-CARBON-PATCH-4.4.0–0478.zip		`
 file to new WUM update format when the patch has configuration changes.
 
 1.  Extract the patch and move the content of the patch0478 directory to
@@ -531,10 +527,9 @@ file to new WUM update format when the patch has configuration changes.
     same content above should be added to the instructions field of the
     new `update-descriptor3.yaml` file after successfully creating the
     update.
->
-    !!!Note : "Expand to see a sample instructions.txt file..."
+     
+??? note "Expand to see a sample instructions.txt file..."
 
-    ``` java
     When the org.wso2.carbon.identity.mgt.IdentityMgtEventListener is enabled via <EventListeners> configuration in repository/conf/identity/identity.xml, it engages CacheClearingUserOperationListener which clears the policy cache.
 
     This should be configurable through <EventListeners> configuration.
@@ -547,7 +542,6 @@ file to new WUM update format when the patch has configuration changes.
     type="org.wso2.carbon.user.core.listener.UserOperationEventListener" name="org.wso2.carbon.identity.entitlement.listener.CacheClearingUserOperationListener" 
     orderId="6" enable="false"
     />
-    ```
 
 3.  Note that the new directory structure looks as follows:
 
