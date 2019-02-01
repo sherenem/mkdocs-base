@@ -19,6 +19,8 @@ manager. The following table shows the key differences between the two:
 A subscription is mandatory to get WSO2 updates. A subscription can be
 of one of the following types:
 
+{! index.md !}
+
 -   Free Trial Subscription: Provides all the functionality of a paid
     subscription for 14 days. The validity period can be extended.
 
