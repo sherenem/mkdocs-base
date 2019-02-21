@@ -74,12 +74,12 @@ extra:
    
 plugins:
    - search
+   - pdf-export:
+        combined: true
 
 extra_css: [extra.css]
 
 markdown_extensions:
-  - markdown_include.include:
-      base_path: docs
   - admonition
   - codehilite
   - pymdownx.arithmatex
